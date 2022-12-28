@@ -1,0 +1,122 @@
+<!-- 1177006cf0d82a0537b047de61b01eef0cc27e7b -->
+<!-- 8b1cb8c10d30cb2c35d692ed4443de1d -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/bb7f191b42.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+      integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>SuperWiki</title>
+  </head>
+  <body id="home">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid" id="nav-bar">
+        <a class="navbar-brand" href="#">
+          <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top"> -->
+          SuperWiki
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Favourite</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="search-container">
+      <form id="search-form" class="d-flex m-2">
+        <input
+          id="search-input"
+          class="form-control me-2 form-danger"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          oninput="getSearchHints()"
+        />
+        <button id="search-btn" class="btn btn-danger" type="button">
+          Search
+        </button>
+      </form>
+      <div id="search-hint"></div>
+    </div>
+
+    <!-- home page list of heros -->
+    <div
+      id="home-page-container"
+      class="d-flex flex-column justify-content-start align-items-center"
+    >
+      <div
+        id="marvel-banner"
+        class="d-flex flex-column justify-content-center align-items-center"
+      >
+        <span>Explore ! the MARVEL universe</span>
+      </div>
+      <span
+        ><button id="reverse-load-button" type="button" class="btn btn-danger load-btn">
+          Z-A
+        </button>
+        <button id="modify-load-button" type="button" class="btn btn-danger load-btn">
+          Newest!
+        </button>
+      </span>
+      <div
+        id="home-page"
+        class="d-flex flex-row justify-content-evenly align-items-center"
+      ></div>
+      <div id="wait-spinner" class="spinner-border text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <button id="load-more-button" type="button" class="btn btn-danger load-btn">
+        More
+      </button>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="keys.js"></script>
+    <script src="home.js"></script>
+    <script src="search.js"></script>    
+  </body>
+</html>
