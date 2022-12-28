@@ -110,9 +110,9 @@ function loadCharacter() {
       charDetails.thumbnail.path + "." + charDetails.thumbnail.extension;
     charDescript.innerText = charDetails.description;
     //------------------------------------------------------
-    loadCard(`${queryHead}characters/comics/${characterId}`,"comics-container")
-    loadCard(`${queryHead}characters/series/${characterId}`,"series-container")
-    loadCard(`${queryHead}characters/events/${characterId}`,"events-container")
+    loadCard(`${queryHead}characters/${characterId}/comics`,"comics-container")
+    loadCard(`${queryHead}characters/${characterId}/series`,"series-container")
+    loadCard(`${queryHead}characters/${characterId}/events`,"events-container")
     //------------------------------------------------------
     // makeEventsList(charDetails.events.collectionURI);
     //------------------------------------------------------
